@@ -17,6 +17,20 @@ namespace Demo01
             persona.Nombres = "Jared";
             persona.Apellidos = "Garcia";
 
+            Profesor profesor = new Profesor
+            {
+                Nombres = "Hugo",
+                Apellidos = "Torrico",
+                Sueldo = 15000
+            };
+
+            Estudiante estudiante = new Estudiante
+            {
+                Nombres = "Jared",
+                Apellidos = "Garcia",
+                CodigodeEstudiante = 115080
+            };
+
             persona.asignarNombreCompleto();
             Console.WriteLine("Bienvenido: " + persona.NombresCompletos);
 
