@@ -12,27 +12,25 @@ namespace Demo01
 
         static void Main(string[] args)
         {
-            
-            Persona persona = new Persona();
-            persona.Nombres = "Jared";
-            persona.Apellidos = "Garcia";
 
-            Profesor profesor = new Profesor
+            Plano plano1 = new Plano()
             {
-                Nombres = "Hugo",
-                Apellidos = "Torrico",
-                Sueldo = 15000
+                x1 = 0,
+                y1 = 0,
+                x2 = 4,
+                y2 = 0,
+                x3 = 0,
+                y3 = 8,
             };
 
-            Estudiante estudiante = new Estudiante
-            {
-                Nombres = "Jared",
-                Apellidos = "Garcia",
-                CodigodeEstudiante = 115080
-            };
-
-            persona.asignarNombreCompleto();
-            Console.WriteLine("Bienvenido: " + persona.NombresCompletos);
+            plano1.calcularDistanciaBase();
+            Console.WriteLine("La Base es de: " + plano1.Base);
+            plano1.calcularDistanciaAltura();
+            Console.WriteLine("La Altura es de: " + plano1.Altura);
+            plano1.calcularArea();
+            Console.WriteLine("El Area es de: " + plano1.Area);
+            plano1.calcularPerimetro();
+            Console.WriteLine("El Perimetro es de: " + plano1.Perimetro);
 
             Console.Read();
         }
